@@ -8,7 +8,7 @@ import Link from 'next/link';
 
 
 
-function signup() {
+function Signup() {
 
   const router = useRouter();
 
