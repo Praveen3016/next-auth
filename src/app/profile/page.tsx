@@ -6,7 +6,7 @@ import {toast} from "react-hot-toast";
 import {useRouter} from "next/navigation";
 
 
-export default function Home() {
+export default function ProfilePage() {
     const router = useRouter()
     const [data, setData] = useState("nothing")
     const [isDark, setisdark] = useState(false)
@@ -70,7 +70,7 @@ useEffect(()=> {
             </div>
             <div className="flex items-center space-x-4 text-lg font-semibold tracking-tight">
                 <p className="px-6 py-2 text-black transition duration-700 ease-out bg-white border border-black rounded-lg hover:bg-black hover:border hover:text-white dark:border-white dark:bg-inherit dark:text-white dark:hover:bg-white dark:hover:text-black">
-               Welcome {data === 'nothing' ? "User" : <Link href={`/profile/${data}`}>{data}
+               Welcome {data === 'nothing' ? "Nothing" : <Link href={`/profile/${data}`}>{data}
             </Link>}
                 </p>
                 <button   onClick={logout} className="font-semibold hover:bg-black hover:text-white hover:ring hover:ring-white transition duration-300 inline-flex items-center justify-center rounded-md text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-white text-black h-10 px-4 py-2">
